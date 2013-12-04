@@ -497,6 +497,10 @@ signifies an empty <span title=concept-domain-label>domain label</span>.
    <li><p>If <span>c</span> is not an <span title="ASCII digits">ASCII digit</span>,
    <span>parse error</span>, return failure. <!-- prevent the empty string -->
 
+   <li><p>If <span>c</span> is "<code title>0</code>" and
+   <span>remaining</span> starts with an <span title="ASCII digits">ASCII digit</span>,
+   <span>parse error</span>, return failure. <!-- prevent non-significant zeros -->
+
    <li><p>While <span>c</span> is an
    <span title="ASCII digits">ASCII digit</span>, set <var title>value</var> to
    <var title>value</var> &times; 10 + <span>c</span> interpreted as decimal number
